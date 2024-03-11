@@ -1,3 +1,28 @@
+<!--PHP-->
+<?php 
+    $company = "";
+    if (array_key_exists('company', $_POST)) {
+        $company = $_POST['company'];
+    }
+    $name = "";
+    if (array_key_exists('name', $_POST)) {
+        $name = $_POST['name'];
+    }
+    $mail = "";
+    if (array_key_exists('mail', $_POST)) {
+        $mail = $_POST['mail']; 
+    }
+    $tel = "";
+    if (array_key_exists('tel', $_POST)) {
+        $tel = $_POST['tel']; 
+    }
+    $content = "";
+    if (array_key_exists('content', $_POST)) {
+        $content = $_POST['content']; 
+    }
+?>
+
+<!--HTML-->
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -10,6 +35,8 @@
 </head>
 
 <body>
+    
+    <!--ヘッダー-->
     <header>
         <nav class="navbar bg-base-200">
             <div class="flex-1">
@@ -44,17 +71,47 @@
             </div>
         </nav>
     </header>
+    
+    <!--ページ中身-->
     <div class="m-4">
         <h1 class="text-4xl">送信完了</h1>
         <div class="my-4">
             <p>ありがとうございました。送信を受け付けました。</p>
             <p>3営業日以内をめどにご返信いたしますので、しばらくお待ちください。</p>
         </div>
+        
+        <div class="mt-4 md:grid md:grid-cols-4">
+            <table class="table w-full col-span-3">
+                <tr>
+                    <th>会社名 :</th>
+                    <td><?php print htmlspecialchars($company, ENT_QUOTES, "UTF-8"); ?></td>
+                </tr>
+                <tr>
+                    <th>氏名 :</th>
+                    <td><?php print htmlspecialchars($name, ENT_QUOTES, "UTF-8"); ?></td>
+                </tr>
+                <tr>
+                    <th>メール :</th>
+                    <td><?php print htmlspecialchars($mail, ENT_QUOTES, "UTF-8"); ?></td>
+                </tr>
+                <tr>
+                    <th>電話番号 :</th>
+                    <td><?php print htmlspecialchars($tel, ENT_QUOTES, "UTF-8"); ?></td>
+                </tr>
+                <tr>
+                    <th>内容 :</th>
+                    <td><?php print htmlspecialchars($content, ENT_QUOTES, "UTF-8"); ?></td>
+                </tr>
+            </table>
+        </div>
+        
         <div class="text-center mb-4">
             <!-- 「戻る」ボタンを紫色にする設定を追加 -->
-            <a href="contact.html" class="btn btn-primary normal-case">戻る</a>
+            <a href="contact.php" class="btn btn-primary normal-case">戻る</a>
         </div>
     </div>
+    
+    <!--フッター-->
     <footer class="text-center pt-3 border-top">
         &copy; 2022 SAMPLE Inc.
     </footer>
