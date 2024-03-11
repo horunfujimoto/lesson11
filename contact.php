@@ -139,7 +139,7 @@
                     プライバシーポリシーをご確認いただき、ご同意の上で、送信ボタンをクリックしてください。<br>
                     お問い合わせの内容は、受付日から3営業日以内をめどにご返信いたします。
                 </p>
-                <form action="complete.html">
+                <form action="complete.php" method="POST">
                     <!-- 以下の2つの指定を追加 -->
                     <!-- (1)768px以上の画面幅のとき、グリッドを使う md:grid-->
                     <!-- (2)768px以上の画面幅のとき、6個のカラムが並んだグリッドにするmd:grid-cols-6 -->
@@ -150,7 +150,7 @@
                         </label>
                         <!-- 768px以上の画面幅のとき、フォーム部品は5つ分のカラム幅で表示する指定を追加 col-span-5 -->
                         <div class="col-span-5">
-                            <input type="text" id="company" name="company" placeholder="会社名を入力してください" class="input input-bordered w-full">
+                            <input type="text" id="company" name="company" placeholder="会社名を入力してください" class="input input-bordered w-full" required>
                         </div>
                     </div>
 
@@ -163,7 +163,7 @@
                         </label>
                         <!-- 768px以上の画面幅のとき、フォーム部品は5つ分のカラム幅で表示する指定を追加 -->
                         <div class="col-span-5">
-                            <input type="text" id="name" name="name" placeholder="氏名を入力してください" class="input input-bordered w-full">
+                            <input type="text" id="name" name="name" placeholder="氏名を入力してください" class="input input-bordered w-full" required>
                         </div>
                     </div>
 
@@ -176,7 +176,7 @@
                         </label>
                         <!-- 768px以上の画面幅のとき、フォーム部品は5つ分のカラム幅で表示する指定を追加 -->
                         <div class="col-span-5">
-                            <input type="text" id="mail" name="mail" placeholder="メールアドレスを入力してください" class="input input-bordered w-full">
+                            <input type="text" id="mail" name="mail" placeholder="メールアドレスを入力してください" class="input input-bordered w-full" required>
                         </div>
                     </div>
 
@@ -189,7 +189,7 @@
                         </label>
                         <!-- 768px以上の画面幅のとき、フォーム部品は5つ分のカラム幅で表示する指定を追加 -->
                         <div class="col-span-5">
-                            <input type="text" id="tel" name="tel" placeholder="電話番号を入力してください" class="input input-bordered w-full">
+                            <input type="text" id="tel" name="tel" placeholder="電話番号を入力してください" class="input input-bordered w-full" required>
                         </div>
                     </div>
 
@@ -202,7 +202,7 @@
                         </label>
                         <!-- 768px以上の画面幅のとき、フォーム部品は5つ分のカラム幅で表示する指定を追加 -->
                         <div class="col-span-5">
-                            <textarea class="textarea textarea-bordered w-full" id="content" name="content" placeholder="内容を入力してください"></textarea>
+                            <textarea class="textarea textarea-bordered w-full" id="content" name="content" placeholder="内容を入力してください" required></textarea>
                         </div>
                     </div>
 
