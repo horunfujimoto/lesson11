@@ -18,7 +18,7 @@
     }
     $content = "";
     if (array_key_exists('content', $_POST)) {
-        $content = $_POST['content']; 
+        $content = $_POST['content'];
     }
 ?>
 
@@ -100,7 +100,7 @@
                 </tr>
                 <tr>
                     <th>内容 :</th>
-                    <td><?php print htmlspecialchars($content, ENT_QUOTES, "UTF-8"); ?></td>
+                    <td><?php print nl2br(htmlspecialchars($content, ENT_QUOTES, "UTF-8")); ?></td>
                 </tr>
             </table>
         </div>
